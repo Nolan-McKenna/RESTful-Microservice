@@ -8,7 +8,7 @@ When working on this assignment, I first chose what language to work in. I have 
 
 Note: I originally tried to use Flask-RESTPlus, but was getting an import error. This StackOverflow thread introduced me to Flask-RESTx, which worked with no problems (https://stackoverflow.com/questions/60156202/flask-app-wont-launch-importerror-cannot-import-name-cached-property-from-w).
 
-Most of my insignt came from the Flask-RESTx documentation (https://flask-restx.readthedocs.io/en/latest/swagger.html).
+Most of my insight came from the Flask-RESTx documentation (https://flask-restx.readthedocs.io/en/latest/swagger.html).
 
 I also found this article helpful when writing the Dockerfile (https://www.educative.io/answers/how-to-create-a-dockerfile-for-running-a-python-application). Additionally, and as always, the official Docker documentation was also helpful (https://docs.docker.com/engine/reference/builder/). 
 
