@@ -4,7 +4,9 @@ Purpose: Run a RESTful microservice with basic CRUD operations in a container
 To build image, make sure Docker is installed and run "_docker image build -t rest-app ._"  
 To run container, run "_docker container run -p 2000:2000 rest-app_"
 
-When working on this assignment, I first chose what language to work in. I have been exposed to Flask in the past, so decided on Python with Flask. While researching the Flask documentation I came across Flask-RESTx, which is designed to easily build REST APIs. It also makes it conveniently integrate SwaggerUI.
+When working on this assignment, I first chose what language to work in. I have been exposed to Flask in the past, so decided on Python with Flask. While researching implementations I came across Flask-RESTx, which is designed to easily build REST APIs. It also makes it convenient to integrate SwaggerUI. 
+
+Note: I originally tried to use Flask-RESTPlus, but was getting an import error. This StackOverflow thread introduced me to Flask-RESTx, which worked with no problems (https://stackoverflow.com/questions/60156202/flask-app-wont-launch-importerror-cannot-import-name-cached-property-from-w).
 
 Most of my insignt came from the Flask-RESTx documentation (https://flask-restx.readthedocs.io/en/latest/swagger.html).
 
