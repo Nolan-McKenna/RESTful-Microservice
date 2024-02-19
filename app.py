@@ -18,7 +18,6 @@ data = {}
 
 @ns.route('/data')
 class MyResource(Resource):
-    @ns.doc("Get all existing data")
     def get(self):
         """Get all data"""
         return data
