@@ -5,7 +5,7 @@ To build image, make sure Docker is installed and run "_docker image build -t no
 
 Then, apply the required YAML files by running "_kubectl apply -f kubernetes_"
 
-Go to http://localhost:31234/ 
+Go to http://localhost:31234
 
 To test Fibonacci sequence, add "_/fib?length=NUM_" to the URL, where NUM is the length of the Fibonacci sequence.
 
