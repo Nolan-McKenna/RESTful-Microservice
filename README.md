@@ -9,6 +9,8 @@ Go to http://localhost:31234
 
 To test Fibonacci sequence, add "_/fib?length=NUM_" to the URL, where NUM is the length of the Fibonacci sequence.
 
+To test the Config route, add "_/config_" to the URL.
+
 **Learning Journey:**
 
 When working on this assignment, I first chose what language to work in. I have been exposed to Flask in the past, so decided on Python with Flask. While researching implementations I came across Flask-RESTx, which is designed to easily build REST APIs. It also makes it convenient to integrate SwaggerUI. 
