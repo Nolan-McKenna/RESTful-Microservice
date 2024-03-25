@@ -1,12 +1,16 @@
 # RESTful-Microservice
 Purpose: Run a RESTful microservice with basic CRUD operations and alternate paths on Kubernetes
 
-To build image, make sure Docker is installed and run "_docker image build -t nolanmckenna/rest-app:latest ._"  
+To build image, make sure Docker is installed and run "_docker image build -t nolanmckenna/rest-app:latest ._"
+
 Then, apply the required YAML files by running "_kubectl apply -f kubernetes_"
+
 Go to http://localhost:31234/ 
+
 To test Fibonacci sequence, add "_/fib?length=NUM_" to the URL, where NUM is the length of the Fibonacci sequence.
 
-**Learning Journey**
+**Learning Journey:**
+
 When working on this assignment, I first chose what language to work in. I have been exposed to Flask in the past, so decided on Python with Flask. While researching implementations I came across Flask-RESTx, which is designed to easily build REST APIs. It also makes it convenient to integrate SwaggerUI. 
 
 Note: I originally tried to use Flask-RESTPlus, but was getting an import error. This StackOverflow thread introduced me to Flask-RESTx, which worked with no problems (https://stackoverflow.com/questions/60156202/flask-app-wont-launch-importerror-cannot-import-name-cached-property-from-w).
