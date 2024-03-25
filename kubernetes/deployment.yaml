@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: rest-app-deployment
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: rest-app
+  template:
+    metadata:
+      labels:
+        app: rest-app
+    spec:
+      containers:
+      - name: rest-app
+        image: nolanmckenna/rest-app:latest
+        ports:
+        - containerPort: 2000
+        env:
+        - name: DATA_MICROSERVICE
+          valueFrom:
+            configMapKeyRef:
+              name: my-configmap
+              key: DATA_MICROSERVICE
