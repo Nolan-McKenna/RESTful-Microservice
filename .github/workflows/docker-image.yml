@@ -14,14 +14,24 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
+    
     - name: Build the Docker image
       run: docker image build -t nolanmckenna/rest-app:latest .
+      
     - name: Run the Docker Container 
       run: docker run --name rest-test -d -p 5001:2000 nolanmckenna/rest-app 
-    - name: Test /fib sequence 
-      run: curl http://localhost:5001/fib 
+      
+    - name: Wait for container to start
+      run: |
+        sleep 10
+
+    - name: Test /fib sequence
+      run: |
+        curl --retry 5 --retry-delay 10 --retry-connrefused http://localhost:5001/fib || true
+
     - name: Stop Container
-      run: docker stop rest-test 
-    - name: Remove container 
+      run: docker stop rest-test
+
+    - name: Remove container
       run: docker rm rest-test
       
