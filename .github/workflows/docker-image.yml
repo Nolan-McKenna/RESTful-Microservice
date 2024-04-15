@@ -17,6 +17,6 @@ jobs:
     - name: Build the Docker image
       run: docker image build -t nolanmckenna/rest-app:latest .
     - name: Run the Docker Container 
-      run: docker run -d -p 5000:5000 rest-app 
+      run: docker run -d -p 5000:5000 nolanmckenna/rest-app 
     - name: Test /fib sequence 
       run: curl http://localhost:31234/fib
