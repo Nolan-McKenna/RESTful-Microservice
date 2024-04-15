@@ -15,4 +15,4 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag nolanmckenna/rest-app:latest .
+      run: docker image build -t nolanmckenna/rest-app:latest .
