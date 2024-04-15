@@ -22,12 +22,10 @@ jobs:
       run: docker run --name rest-test -d -p 5001:2000 nolanmckenna/rest-app 
       
     - name: Wait for container to start
-      run: |
-        sleep 10
+      run: sleep 10
 
     - name: Test /fib sequence
-      run: |
-        curl --retry 5 --retry-delay 10 --retry-connrefused http://localhost:5001/fib || true
+      run: curl http://localhost:5001/fib
 
     - name: Stop Container
       run: docker stop rest-test
